@@ -37,10 +37,10 @@ MTP ❌
 
 后续会移除不需要的二进制，修BUG，增加新功能的
 ## 注意
-自行构建的OrangeFox不能直接刷如recovery分区(Release里的是处理好的)，需要使用仓库下的“移植vbmeta.py”脚本把原厂recovery的avb信息移植过去后再刷入  
+自行构建的OrangeFox不能直接刷入recovery分区(Release里的是处理好的)，需要使用仓库下的“移植vbmeta.py”脚本把原厂recovery的avb信息移植过去后再刷入  
 python 移植vbmeta.py <原厂recovery.img> <被修补的镜像> <修补后的文件>
 
 ## Maintainer
 haohao3001 - 维护者  
 基于[hackpupg001-a11y的设备树](https://github.com/hackpupg001-a11y/android_device_xiaomi_myron)魔改  
-recovery/root下的大部分二进制文件来自于 變換風雲@coolpak 的TWRP
+recovery/root下的大部分二进制文件来自于 變換風雲@coolapk 的TWRP
