@@ -2,10 +2,11 @@
 # TWRP 16 / SM8850 / canoe / NXP KeyMint / Virtual A/B
 # SPDX-License-Identifier: Apache-2.0
 
-import /init.recovery.logd.rc
-import /init.recovery.ldconfig.rc
-import /init.recovery.usb.rc
-import /init.recovery.service.rc
+#为什么要导入两遍？(init.rc中已包含)
+#import /init.recovery.logd.rc
+#import /init.recovery.ldconfig.rc
+#import /init.recovery.usb.rc
+#import /init.recovery.service.rc
 import /init.recovery.hlthchrg.rc
 import /init.recovery.wifi.rc
 
@@ -115,8 +116,6 @@ on property:twrp.modules.loaded=true
     # NXP eSE / Weaver NFC transport
     insmod /vendor/lib/modules/stm_nfc_i2c.ko
     insmod /vendor/lib/modules/nxp-nci.ko
-    insmod /tmp/vendor/lib/modules/stm_nfc_i2c.ko
-    insmod /tmp/vendor/lib/modules/nxp-nci.ko
 
     # Touch: force normal coordinate reporting mode (disable raw/THP)
     wait /sys/class/touch/touch_dev/enable_touch_raw

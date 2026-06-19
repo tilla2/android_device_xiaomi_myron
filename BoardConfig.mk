@@ -323,7 +323,6 @@ TW_NO_LEGACY_PROPS          := true
 # Tăng wait time: mca_business_battery driver cần ~1.7s để probe (dmesg)
 # 8 giây đủ margin kể cả khi ADSP boot chậm
 TW_BATTERY_SYSFS_WAIT_SECONDS := 8
-TW_EXCLUDE_APEX := true
 
 # ─────────────────────────────────────────────────────────
 # Misc
@@ -342,5 +341,11 @@ TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone45/temp"
 TW_BACKUP_EXCLUSIONS  := /data/fonts
 TW_DEVICE_VERSION     := POCO_F8_Ultra
 
+#Toybox
+TW_USE_TOOLBOX := true
+
 #解密Data
 TW_INCLUDE_OMAPI := true
+
+#MTP支持
+TW_HAS_MTP := true

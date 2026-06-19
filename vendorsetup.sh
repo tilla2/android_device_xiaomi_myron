@@ -30,7 +30,7 @@ export OF_AB_DEVICE_WITH_RECOVERY_PARTITION=1
 export FOX_VIRTUAL_AB_DEVICE=1
 
 # ─── API prebuilts ────────────────────────────────────────────────────────────
-export FOX_ADD_API_V34_PREBUILTS=1
+export FOX_ADD_API_V34_PREBUILTS=0
 
 # ─── dmctl ────────────────────────────────────────────────────────────────────
 export OF_USE_DMCTL=1
@@ -46,12 +46,13 @@ export FOX_USE_LZ4_BINARY=1
 export FOX_USE_ZSTD_BINARY=1
 export FOX_USE_DATE_BINARY=1
 export FOX_USE_GREP_BINARY=1
-export FOX_USE_BUSYBOX_BINARY=1
+export FOX_USE_BUSYBOX_BINARY=0
 export FOX_USE_XZ_UTILS=1
 export FOX_USE_FSCK_EROFS_BINARY=1
 export FOX_USE_PATCHELF_BINARY=1
 export FOX_USE_UPDATED_MAGISKBOOT=1
-export FOX_MOVE_MAGISK_INSTALLER_TO_RAMDISK=1
+#不支持Magisk喵，需要的可自行构建，把FOX_MOVE_MAGISK_INSTALLER_TO_RAMDISK改为1即可
+export FOX_MOVE_MAGISK_INSTALLER_TO_RAMDISK=0
 
 # ─── Compatibility & quirks ───────────────────────────────────────────────────
 export OF_TWRP_COMPATIBILITY_MODE=1
@@ -78,8 +79,6 @@ export FOX_ALLOW_EARLY_SETTINGS_LOAD=1
 
 # ─── KernelSU support ─────────────────────────────────────────────────────────
 export FOX_ENABLE_KERNELSU_SUPPORT=1
-export FOX_ENABLE_KERNELSU_NEXT_SUPPORT=1
-export FOX_ENABLE_SUKISU_SUPPORT=1
 
 # ─── Display ──────────────────────────────────────────────────────────────────
 # Resolution: 1200x2340 (confirmed), status bar height: 141
@@ -101,5 +100,9 @@ export FOX_MAINTAINER_PATCH_VERSION=$(date +%y%m%d)
 export OF_MAINTAINER="haohao3001@github"
 
 # ─── Magisk ───────────────────────────────────────────────────────────────────
-export OF_MAGISK="/tmp/misc/Magisk.zip"
-export FOX_USE_SPECIFIC_MAGISK_ZIP="/tmp/misc/Magisk.zip"
+#不支持Magisk喵，需要的可自行构建
+#export OF_MAGISK="/tmp/misc/Magisk.zip"
+#export FOX_USE_SPECIFIC_MAGISK_ZIP="/tmp/misc/Magisk.zip"
+
+#安全相关
+#export OF_ADVANCED_SECURITY=1
